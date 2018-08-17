@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.e4mwalli.radio.MainActivity">
+
+    <RadioGroup
+        android:id="@+id/kanava"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="62dp"
+        android:layout_below="@+id/IBut_vas_pit"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RadioButton
+            android:id="@+id/ch1"
+            android:layout_width="145dp"
+            android:layout_height="48dp"
+            android:text="Radio Button 1"
+            android:checked="true"
+            android:onClick="onRadioButtonClicked" />
+
+        <RadioButton
+            android:id="@+id/ch2"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="Radio Button 2"
+            android:onClick="onRadioButtonClicked" />
+    </RadioGroup>
+
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/current"
+        android:textSize="72sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:id="@+id/taaj"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/IBut_vas_pit"
+        android:layout_alignEnd="@+id/IBut_vas_pit" />
+
+    <SeekBar
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar1"
+        android:progress="80"
+        android:max="100"
+        android:layout_below="@+id/current"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="MHz"
+        android:textSize="72sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:src="@mipmap/leftbutton"
+        android:background="@color/colorWhite"
+        android:textColor="@color/colorPrimaryDark"
+        android:onClick="button2"
+        android:layout_width="62sp"
+        android:layout_height="82sp"
+        android:id="@+id/button2"
+        android:layout_alignTop="@+id/IBut_vas_pit"
+        android:layout_alignRight="@+id/kanava"
+        android:layout_alignEnd="@+id/kanava"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:src="@mipmap/rightbutton"
+        android:textColor="@color/colorPrimaryDark"
+        android:background="@color/colorWhite"
+        android:layout_width="62sp"
+        android:textSize="25sp"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:layout_alignTop="@+id/IBut_vas_pit"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/taaj"
+        android:layout_toEndOf="@+id/taaj"
+        android:onClick="button"
+        android:layout_alignBottom="@+id/button2" />
+
+    <ImageButton
+
+        android:src="@mipmap/ic_launcher"
+        android:id="@+id/IBut_vas_pit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:onClick="IB_vas_pit"
+        android:layout_below="@+id/seekBar1"
+        android:layout_toRightOf="@+id/button2"
+        android:layout_toEndOf="@+id/button2" />
+
+
+</RelativeLayout>
